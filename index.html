@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberbezpieczeństwo - Szkoła nr 12 Warszawa</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background:#f4f6f8; }
+        header { background:#1e3a8a; color:white; padding:30px; text-align:center; }
+        nav { background:#0f172a; padding:15px; text-align:center; }
+        nav a { color:white; margin:10px; text-decoration:none; font-weight:bold; }
+        nav a:hover { text-decoration:underline; }
+        .container { max-width:1100px; margin:auto; }
+        section { display:none; background:white; padding:25px; margin-top:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
+        section.active { display:block; }
+        h2 { color:#1e3a8a; }
+        footer { text-align:center; padding:15px; margin-top:20px; background:#1e3a8a; color:white; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Cyberbezpieczeństwo</h1>
+    <p>Szkoła nr 12 w Warszawie</p>
+</header>
+
+<nav>
+    <a onclick="showSection('home')">Strona główna</a>
+    <a onclick="showSection('info')">Informacje</a>
+    <a onclick="showSection('euslugi')">E-usługi</a>
+    <a onclick="showSection('sieci')">Sieci</a>
+    <a onclick="showSection('komputery')">Komputery</a>
+    <a onclick="showSection('serwery')">Serwery</a>
+</nav>
+
+<div class="container">
+
+<section id="home" class="active">
+    <h2>Witamy</h2>
+    <p>Strona poświęcona cyberbezpieczeństwu w Szkole nr 12 w Warszawie. Znajdziesz tutaj zasady, procedury oraz rozwiązania techniczne zwiększające bezpieczeństwo systemów informatycznych.</p>
+</section>
+
+<section id="info">
+    <h2>Bezpieczeństwo informacji</h2>
+    <h3>Czynności i zasady</h3>
+    <ul>
+        <li>Stosowanie silnych haseł (min. 12 znaków)</li>
+        <li>Regularna zmiana haseł</li>
+        <li>Szkolenia dla uczniów i nauczycieli</li>
+        <li>Ograniczenie dostępu do danych</li>
+    </ul>
+    <h3>Programy</h3>
+    <ul>
+        <li>Antywirus (np. Windows Defender)</li>
+        <li>Firewall</li>
+        <li>Oprogramowanie do backupu</li>
+    </ul>
+    <h3>Sprzęt</h3>
+    <ul>
+        <li>Routery z zabezpieczeniami WPA3</li>
+        <li>Serwery lokalne</li>
+        <li>UPS (zasilanie awaryjne)</li>
+    </ul>
+</section>
+
+<section id="euslugi">
+    <h2>Bezpieczeństwo e-usług</h2>
+    <p>Szkoła korzysta z e-dziennika, platform edukacyjnych i poczty.</p>
+    <ul>
+        <li>Dwuskładnikowe logowanie (2FA)</li>
+        <li>Szyfrowane połączenia HTTPS</li>
+        <li>Regularne zmiany haseł</li>
+        <li>Ochrona przed phishingiem</li>
+    </ul>
+</section>
+
+<section id="sieci">
+    <h2>Bezpieczeństwo sieci</h2>
+    <ul>
+        <li>Segmentacja sieci (uczniowie/nauczyciele)</li>
+        <li>Monitorowanie ruchu</li>
+        <li>Firewall sprzętowy</li>
+        <li>Ukrywanie SSID</li>
+    </ul>
+</section>
+
+<section id="komputery">
+    <h2>Bezpieczeństwo komputerów</h2>
+    <ul>
+        <li>Automatyczne aktualizacje</li>
+        <li>Oprogramowanie antywirusowe</li>
+        <li>Szyfrowanie dysków</li>
+        <li>Blokada kont użytkowników</li>
+    </ul>
+</section>
+
+<section id="serwery">
+    <h2>Bezpieczeństwo serwerów</h2>
+    <ul>
+        <li>Backup codzienny</li>
+        <li>Kontrola dostępu (role użytkowników)</li>
+        <li>Monitoring 24/7</li>
+        <li>Aktualizacje systemów serwerowych</li>
+    </ul>
+</section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Szkoła nr 12 Warszawa</p>
+</footer>
+
+<script>
+function showSection(id) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
